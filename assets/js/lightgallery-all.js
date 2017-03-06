@@ -1044,7 +1044,7 @@
                 _this.goToPrevSlide(true);
             } else if (Math.abs(distance) < 5) {
 
-                // Trigger click if distance is less than 5 pix
+                // Trigger click if margin is less than 5 pix
                 _this.$el.trigger('onSlideClick.lg');
             }
 
