@@ -31,6 +31,7 @@ if ($somethingIsWrong) {
 
 // SQL :: rex_media_manager_type => lightgallery_0450
 $mediamanager_typ = rex_sql::factory();
+#$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
 $mediamanager_typ->setValue('name','lightgallery_0450');
 $mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 450px)');
@@ -45,6 +46,7 @@ try {
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
 
 $mediamanager_typ_effekt = rex_sql::factory();
+#$mediamanager_typ_effekt->setDebug();
 $mediamanager_typ_effekt->setTable('rex_media_manager_type_effect');
 $mediamanager_typ_effekt->setValue('type_id', $mediamanager_typ_id);
 $mediamanager_typ_effekt->setValue('priority', 1);
@@ -61,6 +63,7 @@ try {
 
 // SQL :: rex_media_manager_type => lightgallery_0650
 $mediamanager_typ = rex_sql::factory();
+#$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
 $mediamanager_typ->setValue('name','lightgallery_0650');
 $mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 650px)');
@@ -75,6 +78,7 @@ try {
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
 
 $mediamanager_typ_effekt = rex_sql::factory();
+#$mediamanager_typ_effekt->setDebug();
 $mediamanager_typ_effekt->setTable('rex_media_manager_type_effect');
 $mediamanager_typ_effekt->setValue('type_id', $mediamanager_typ_id);
 $mediamanager_typ_effekt->setValue('priority', 1);
@@ -91,6 +95,7 @@ try {
 
 // SQL :: rex_media_manager_type => lightgallery_0900
 $mediamanager_typ = rex_sql::factory();
+#$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
 $mediamanager_typ->setValue('name','lightgallery_0900');
 $mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 900px)');
@@ -105,6 +110,7 @@ try {
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
 
 $mediamanager_typ_effekt = rex_sql::factory();
+#$mediamanager_typ_effekt->setDebug();
 $mediamanager_typ_effekt->setTable('rex_media_manager_type_effect');
 $mediamanager_typ_effekt->setValue('type_id', $mediamanager_typ_id);
 $mediamanager_typ_effekt->setValue('priority', 1);
@@ -121,6 +127,7 @@ try {
 
 // SQL :: rex_media_manager_type => lightgallery_1100
 $mediamanager_typ = rex_sql::factory();
+#$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
 $mediamanager_typ->setValue('name','lightgallery_1100');
 $mediamanager_typ->setValue('description','Zur Darstellung der großen Bilder in der lightgallery. (resize_width: 1100px)');
@@ -135,6 +142,7 @@ try {
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
 
 $mediamanager_typ_effekt = rex_sql::factory();
+#$mediamanager_typ_effekt->setDebug();
 $mediamanager_typ_effekt->setTable('rex_media_manager_type_effect');
 $mediamanager_typ_effekt->setValue('type_id', $mediamanager_typ_id);
 $mediamanager_typ_effekt->setValue('priority', 1);
@@ -151,6 +159,7 @@ try {
 
 // SQL :: rex_media_manager_type => parallax
 $mediamanager_typ = rex_sql::factory();
+#$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
 $mediamanager_typ->setValue('name','parallax');
 $mediamanager_typ->setValue('description','Zur Darstellung der Parallax Bilder. (resize_width: 2560px) ');
@@ -165,6 +174,7 @@ try {
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
 
 $mediamanager_typ_effekt = rex_sql::factory();
+#$mediamanager_typ_effekt->setDebug();
 $mediamanager_typ_effekt->setTable('rex_media_manager_type_effect');
 $mediamanager_typ_effekt->setValue('type_id', $mediamanager_typ_id);
 $mediamanager_typ_effekt->setValue('priority', 1);

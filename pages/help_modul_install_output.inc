@@ -1,21 +1,34 @@
-<!-- // --- MODUL | 03 . Galerie (INPUT) -->
-
-<!-- ...ein Auszug... -->
-
-<div class="form-group">
-  <i>Bilder</i>
-  <div class="col-sm-12">
-    REX_MEDIALIST[id="1" widget="1"]
-    <i>Bilder in der Medienkategorie "Fotos" (ID 1) haben ein zusätzliches Linkfeld.</i>
-  </div>
-</div>
-
-<!-- ...ein Auszug... -->
-
-
 <!-- // --- MODUL | 03 . Galerie (OUTPUT) -->
 
 <?php
+//--- REX_VALUES
+// settings
+$value1 = rex_var::toArray('REX_VALUE[1]');
+// data
+$value2 = rex_var::toArray('REX_VALUE[2]');
+
+// mediatyp
+if ( !isset($value1['set_typ']) ) {
+    // Ergänzungen benötigt für diverse Bildtypen im Mediamanager!
+    $value1['set_typ'] = 'lightgallery_0450';
+}
+
+// animation
+if ( !isset($value1['set_animationclass']) ) {
+    $value1['set_animationclass'] = 'aniview';
+}
+
+// values
+$value1['set_template'] = ($this->getTemplateId() == 3) ? ' container' : '';
+$value1['set_margin'] = ($value1['set_margin'] != '') ? ' '.$value1['set_margin'] : '';
+
+//--- PRESETS
+// Rahmen?
+$value2['data_frame'] = ($value2['data_frame'] != '') ? $value2['data_frame'] : 'gallery__item--framed';
+
+// Language suffix
+$languageSuffix = '';
+$languageSuffix = (rex_clang::getCurrentId() == 2) ? '_en' : '';
 
 // frontend / backend
 $frontend = '';
@@ -25,14 +38,20 @@ if ("REX_MEDIALIST[1]" != '') {
     $media_list = explode(',', "REX_MEDIALIST[1]");
 
     $frontend .= '
-	<section class="gallery__wrapper clearfix">';
+	<section class="gallery__wrapper clearfix '.$value1['set_background'].' '.$value1['set_class'].'">';
 
     $frontend .= '
-        <div class="gallery">';
+        <div class="gallery '.$value1['set_template'].' '.$value1['set_margin'].'">';
+
+    if ($value2['data_title'] != '') {
+        $frontend .= '
+			<'.$value2['data_hlevel'].'>'.$value2['data_title'].'</'.$value2['data_hlevel'].'>';
+        $backend .= '
+			<'.$value2['data_hlevel'].'>'.$value2['data_title'].'</'.$value2['data_hlevel'].'>';
+    }
 
     $frontend .= '
 		    <div class="row">';
-
 
     foreach ($media_list as $media_file) {
         $media = rex_media::get($media_file);
@@ -50,16 +69,17 @@ if ("REX_MEDIALIST[1]" != '') {
             $media_link = ( $media_link != '' ) ? $media_link : '';
 
             $frontend .= '
-            <div class="gallery__item col-md-3 col-sm-4 col-xs-6">
+            <div class="gallery__item '.$value2['data_frame'].' col-md-3 col-sm-4 col-xs-6 '.$value1['set_animationclass'].'" data-av-animation="'.$value1['set_animation'].'">
             
-                <figure class="SET__EFFECTS">
-                    <img src="index.php?rex_media_type=lightgallery_0450&rex_media_file='.$media_file.'" 
+                <figure class="'.$value1['set_effects'].'">
+                    <img src="index.php?rex_media_type='.$value1['set_typ'].'&rex_media_file='.$media_file.'" 
                         srcset="" 
                         title="'.$media_copyright.' | '.$media_title.' | '.$media_description.'" 
                         alt="'.$media_copyright.' | '.$media_title.' | '.$media_description.'
                         ">
                     <figcaption>';
 
+            #if ( $media_description != '' && $this->getTemplateId() == 3 ) {
             if ( $media_description != '' ) {
                 // Nur im Einspalter "02 . Article (1-col)" Bildtexte anzeigen, da Bilder ansonsten zu klein
                 $frontend .= '
@@ -69,7 +89,7 @@ if ("REX_MEDIALIST[1]" != '') {
 
             $frontend .= '
                         <a class="lightgallery__button" rel="lg__REX_SLICE_ID" data-src="index.php?rex_media_type=lightgallery_1100&rex_media_file='.$media_file.'">
-                            <img src="index.php?rex_media_type=lightgallery_0450&rex_media_file='.$media_file.'" title="'.$media_copyright.' | '.$media_title.' | '.$media_description.'" alt="'.$media_copyright.' | '.$media_title.' | '.$media_description.'">
+                            <img src="index.php?rex_media_type='.$value1['set_typ'].'&rex_media_file='.$media_file.'" title="'.$media_copyright.' | '.$media_title.' | '.$media_description.'" alt="'.$media_copyright.' | '.$media_title.' | '.$media_description.'">
                         </a>';
 
             if ($media_link != '') {
@@ -92,6 +112,8 @@ if ("REX_MEDIALIST[1]" != '') {
     $frontend .= '
             </div><!-- /.row -->
             
+            <div class="'.$value1['set_hline'].'"></div>
+
 		</div><!-- /.gallery -->
 		
 	</section><!-- /.gallery__wrapper clearfix -->';
@@ -105,4 +127,7 @@ if (rex::isBackend()) {
     echo $frontend;
 }
 
+if ( rex::isBackend() && $value1['set_class'] != '' ) {
+    echo '<i>Zusätzliche CSS-KLASSE: ' .$value1['set_class']. '</i>';
+}
 ?>

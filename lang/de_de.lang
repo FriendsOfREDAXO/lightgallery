@@ -10,9 +10,12 @@ lightgallery_title = lightGallery
 
 lightgallery_info = Info
 lightgallery_help = Hilfe
-lightgallery_help_template = Hilfe (Template)
-lightgallery_help_modul = Hilfe (Modul)
+lightgallery_help_template = Hilfe (Template-Beispiel)
+lightgallery_help_modul = Hilfe (Modul-Beispiel)
 lightgallery_license = Lizenz
+lightgallery_modul_install_description = lightGallery Modul - Update / Installation
+lightgallery_modul_update = lightGallery Modul - Update
+lightgallery_modul_install = lightGallery Modul - Installation
 
 
 # Page:CONFIG (CONTENT)

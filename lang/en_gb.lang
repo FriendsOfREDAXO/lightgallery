@@ -1,1 +1,34 @@
+# Da R5 nur noch mit UTF8 arbeitet, entfällt der "utf8"-Suffix
+# Die Keys sollten mit dem Addonnamen beginnen, da sie so innerhalb des Addons vereinfacht abgefragt werden können
+
+# Addon
+
+lightgallery_title = lightGallery
+
+
+# Pages (LINKS)
+
+lightgallery_info = Info
+lightgallery_help = Hilfe
+lightgallery_help_template = Hilfe (Template-Beispiel)
+lightgallery_help_modul = Hilfe (Modul-Beispiel)
+lightgallery_license = Lizenz
+lightgallery_modul_install_description = lightGallery Modul - Update / Installation
+lightgallery_modul_update = lightGallery Modul - Update
+lightgallery_modul_install = lightGallery Modul - Installation
+
+
+# Page:CONFIG (CONTENT)
+
+lightgallery_config = Einstellungen
+lightgallery_config_url = URL
+lightgallery_config_ids = IDs
+lightgallery_config_save = Einstellungen speichern
+lightgallery_config_saved = Einstellungen wurden gespeichert!
+
+
+# Benennung für die Addonrechte, sichtbar innerhalb der REDAXO-Administration unter Benutzer > Rollen > Allgemein
+
+perm_general_lightgallery[] = Rechte für LightGallery-Addon
+perm_general_lightgallery[config] = Rechte für LightGallery-Addon-Konfiguration
 
