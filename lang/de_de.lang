@@ -12,6 +12,7 @@ lightgallery_info = Info
 lightgallery_help = Hilfe
 lightgallery_help_template = Hilfe (Template-Beispiel)
 lightgallery_help_modul = Hilfe (Modul-Beispiel)
+lightgallery_changelog = Anpassungen
 lightgallery_license = Lizenz
 
 lightgallery_modul_install_description = lightGallery Modul - Update / Installation
