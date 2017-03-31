@@ -1,3 +1,10 @@
+**31.03.2017 Version 0.4.2**
+
+- inkl. Metafeldern Prioritäten für die Installation zugewiesen
+- neues art_title feld
+- sprachdateien ergänzt
+
+
 **31.03.2017 Version 0.4.1**
 
 - inkl. Metafeldern Prioritäten für die Installation zugewiesen

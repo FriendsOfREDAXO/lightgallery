@@ -16,7 +16,7 @@ $content .= '
 <p>
     Bei der Installation wurden mehrere Metainformationen beim Meta Info AddOn hinzugefügt:
 <ul>
-    <li><strong>Artikel:</strong> art_header_legend, art_header_image, art_header_darken, art_header_gallery</li>
+    <li><strong>Artikel:</strong> art_title, art_header_legend, art_header_image, art_header_darken, art_header_gallery</li>
     <li><strong>Kategorien:</strong> cat_teaser_legend, cat_pic, cat_description</li>
     <li><strong>Medien:</strong> med_gallery_darken, med_gallery_legend, med_gallery_title, med_gallery_text, med_gallery_link, med_gallery_link_text</li>
 </ul>
@@ -160,7 +160,9 @@ if (rex::getUser()->isAdmin()) {
 
     if (rex_request('install_metainfo',"integer") == 1) {
 
+        // rex_metainfo_add_field() :: rex_metainfo_field => Diverse Metafelder
         // Metainformationen - ARTIKEL
+        rex_metainfo_add_field('Individueller Title-Tag', 'art_title', '1','','1','','','','');
         rex_metainfo_add_field('Header', 'art_header_legend', '6','','12','','','','');
         rex_metainfo_add_field('Header Foto (statisch)', 'art_header_image', '6','','6','','preview=1','','');
         rex_metainfo_add_field('Header Abdunkelung', 'art_header_darken', '6','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','');
