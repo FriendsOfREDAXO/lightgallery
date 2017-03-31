@@ -1,7 +1,7 @@
 # Alle hier gesetzten Werte können über $addon->getProperty($key) abgefragt werden
 
 package: lightgallery # Pflichtfeld
-version: '0.3.0' # Pflichtfeld
+version: '0.4.0' # Pflichtfeld
 author: Friends Of REDAXO
 supportpage: https://github.com/FriendsOfREDAXO/lightgallery
 

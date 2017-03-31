@@ -16,9 +16,9 @@ $content .= '
 <p>
     Bei der Installation wurden mehrere Metainformationen beim Meta Info AddOn hinzugefügt:
 <ul>
-    <li><strong>Artikel:</strong> art_file, art_darken, art_gallery</li>
+    <li><strong>Artikel:</strong> art_header_legend, art_header_image, art_header_darken, art_header_gallery</li>
     <li><strong>Kategorien:</strong> cat_teaser_legend, cat_pic, cat_description</li>
-    <li><strong>Medien:</strong> med_darken, med_gallery_legend, med_gallery_title, med_gallery_text, med_gallery_link, med_gallery_link_text</li>
+    <li><strong>Medien:</strong> med_gallery_darken, med_gallery_legend, med_gallery_title, med_gallery_text, med_gallery_link, med_gallery_link_text</li>
 </ul>
     Sollten diese fehlen, bitte ein reinstall durchführen!
 </p>
@@ -161,18 +161,18 @@ if (rex::getUser()->isAdmin()) {
     if (rex_request('install_metainfo',"integer") == 1) {
 
         // Metainformationen - ARTIKEL
-        rex_metainfo_add_field('Header', 'art_legend', '','','12','','','','');
-        rex_metainfo_add_field('Header Foto (statisch)', 'art_file', '','','6','','preview=1','','');
-        rex_metainfo_add_field('Header Abdunkelung', 'art_darken', '','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','');
-        rex_metainfo_add_field('Header Galerie (dynamisch als Slider)', 'art_gallery', '','','7','','category=3 preview=1','','');
+        rex_metainfo_add_field('Header', 'art_header_legend', '6','','12','','','','');
+        rex_metainfo_add_field('Header Foto (statisch)', 'art_header_image', '','','6','','preview=1','','');
+        rex_metainfo_add_field('Header Abdunkelung', 'art_header_darken', '','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','');
+        rex_metainfo_add_field('Header Galerie (dynamisch als Slider)', 'art_header_gallery', '','','7','','category=3 preview=1','','');
 
         // Metainformationen - KATEGORIEN
         rex_metainfo_add_field('Teaser', 'cat_teaser_legend', '','','12','','','','');
-        rex_metainfo_add_field('Teaser Bild', 'cat_pic', '','','6','','preview=1','','');
-        rex_metainfo_add_field('Teaser Text', 'cat_description', '','','2','','','','');
+        rex_metainfo_add_field('Teaser Bild', 'cat_teaser_image', '','','6','','preview=1','','');
+        rex_metainfo_add_field('Teaser Text', 'cat_teaser_description', '','','2','','','','');
 
         // Metainformationen - MEDIEN
-        rex_metainfo_add_field('Abdunkelung', 'med_darken', '','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','|2|');
+        rex_metainfo_add_field('Abdunkelung', 'med_gallery_darken', '6','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','|2|');
         rex_metainfo_add_field('Galerie', 'med_gallery_legend', '','','12','','','','|2|');
         rex_metainfo_add_field('Galerie Titel', 'med_gallery_title', '','','1','','','','|2|');
         rex_metainfo_add_field('Galerie Text', 'med_gallery_text', '','','2','','','','|2|');
