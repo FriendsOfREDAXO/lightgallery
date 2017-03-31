@@ -13,9 +13,14 @@ lightgallery_help = Hilfe
 lightgallery_help_template = Hilfe (Template-Beispiel)
 lightgallery_help_modul = Hilfe (Modul-Beispiel)
 lightgallery_license = Lizenz
+
 lightgallery_modul_install_description = lightGallery Modul - Update / Installation
 lightgallery_modul_update = lightGallery Modul - Update
 lightgallery_modul_install = lightGallery Modul - Installation
+
+lightgallery_template_install_description = lightGallery Template - Update / Installation
+lightgallery_template_update = lightGallery Template - Update
+lightgallery_template_install = lightGallery Template - Installation
 
 
 # Page:CONFIG (CONTENT)
@@ -31,4 +36,3 @@ lightgallery_config_saved = Einstellungen wurden gespeichert!
 
 perm_general_lightgallery[] = Rechte für LightGallery-Addon
 perm_general_lightgallery[config] = Rechte für LightGallery-Addon-Konfiguration
-

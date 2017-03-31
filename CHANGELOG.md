@@ -1,3 +1,7 @@
+**31.03.2017 Version 0.3**
+
+- inkl. Templateinstallation und kleineren Korrekturen
+
 **29.03.2017 Version 0.2**
 
 - inkl. Modulinstallation und kleineren Korrekturen

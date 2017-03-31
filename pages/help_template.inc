@@ -14,7 +14,7 @@
 
     <!-- // --- TEMPLATE | JS -->
 
-    <!-- Variante 1 bzs. 2 gilt auch für die JS-Dateien -->
+    <!-- Variante 1 bzw. 2 gilt auch für die JS-Dateien -->
 
     <!-- jQuery // Nur notwendig wenn jQuery nicht anders eingebunden wird // -->
     <script src="<?php echo rex_url::base('assets/lightgallery/plugins/jquery/jquery-3.1.1.min.js') ?>"></script>
