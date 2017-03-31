@@ -5,11 +5,25 @@ $content .= '
 <p>
     Bei der Installation wurden mehrere Effekte beim Media Manager AddOn hinzugefügt:
 <ul>
-    <li><strong>Galerie:</strong> lightgallery_0450,lightgallery_0650,lightgallery_0900,lightgallery_1100</li>
+    <li><strong>Galerie:</strong> lightgallery_0450, lightgallery_0650, lightgallery_0900, lightgallery_1100</li>
     <li><strong>Scrolling:</strong> parallax</li>
 </ul>
     Sollten diese fehlen, bitte ein reinstall durchführen!
 </p>
+
+<hr>
+
+<p>
+    Bei der Installation wurden mehrere Metainformationen beim Meta Info AddOn hinzugefügt:
+<ul>
+    <li><strong>Artikel:</strong> art_file, art_darken, art_gallery</li>
+    <li><strong>Kategorien:</strong> cat_teaser_legend, cat_pic, cat_description</li>
+    <li><strong>Medien:</strong> med_darken, med_gallery_legend, med_gallery_title, med_gallery_text, med_gallery_link, med_gallery_link_text</li>
+</ul>
+    Sollten diese fehlen, bitte ein reinstall durchführen!
+</p>
+
+<hr>
 
 <p>
     Bei der Installation wurden mehrere PlugIns im Asset-Ordner des Addons unter "./plugins/" hinzugefügt:
@@ -20,6 +34,8 @@ $content .= '
 </ul>
     <i>Werden aktuell teilweise für Projekte genutzt! (Könnten zukünfig entfallen.)</i>
 </p>
+
+<hr>
 ';
 
 if (rex::getUser()->isAdmin()) {
@@ -139,6 +155,37 @@ if (rex::getUser()->isAdmin()) {
         $content .= '<p><a class="btn btn-primary" href="index.php?page=lightgallery/help&amp;install_template=1" class="rex-button">' . $this->i18n('template_install', $template_name) . '</a></p>';
 
     }
+
+    // rex_metainfo_add_field() :: rex_metainfo_field => Diverse Metafelder
+
+    if (rex_request('install_metainfo',"integer") == 1) {
+
+        // Metainformationen - ARTIKEL
+        rex_metainfo_add_field('Header', 'art_legend', '','','12','','','','');
+        rex_metainfo_add_field('Header Foto (statisch)', 'art_file', '','','6','','preview=1','','');
+        rex_metainfo_add_field('Header Abdunkelung', 'art_darken', '','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','');
+        rex_metainfo_add_field('Header Galerie (dynamisch als Slider)', 'art_gallery', '','','7','','category=3 preview=1','','');
+
+        // Metainformationen - KATEGORIEN
+        rex_metainfo_add_field('Teaser', 'cat_teaser_legend', '','','12','','','','');
+        rex_metainfo_add_field('Teaser Bild', 'cat_pic', '','','6','','preview=1','','');
+        rex_metainfo_add_field('Teaser Text', 'cat_description', '','','2','','','','');
+
+        // Metainformationen - MEDIEN
+        rex_metainfo_add_field('Abdunkelung', 'med_darken', '','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','|2|');
+        rex_metainfo_add_field('Galerie', 'med_gallery_legend', '','','12','','','','|2|');
+        rex_metainfo_add_field('Galerie Titel', 'med_gallery_title', '','','1','','','','|2|');
+        rex_metainfo_add_field('Galerie Text', 'med_gallery_text', '','','2','','','','|2|');
+        rex_metainfo_add_field('Galerie Link (mit http://)', 'med_gallery_link', '','','1','','','','|2|');
+        rex_metainfo_add_field('Galerie Linktext', 'med_gallery_link_text', '','','1','','','','|2|');
+
+        echo rex_view::success('Metafelder wurde installiert/aktualisiert');
+
+    }
+
+    $content .= '<p>'.$this->i18n('metainfo_install_description').'</p>';
+
+    $content .= '<p><a class="btn btn-primary" href="index.php?page=lightgallery/help&amp;install_metainfo=1" class="rex-button">' . $this->i18n('metainfo_install', 'Metainfos Re-/Installieren') . '</a></p>';
 
 }
 

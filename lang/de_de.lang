@@ -22,6 +22,10 @@ lightgallery_template_install_description = lightGallery Template - Update / Ins
 lightgallery_template_update = lightGallery Template - Update
 lightgallery_template_install = lightGallery Template - Installation
 
+lightgallery_metainfo_install_description = lightGallery Metafelder - Update / Installation
+lightgallery_metainfo_update = lightGallery Metafelder - Update
+lightgallery_metainfo_install = lightGallery Metafelder - Installation
+
 
 # Page:CONFIG (CONTENT)
 
