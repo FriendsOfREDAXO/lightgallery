@@ -21,14 +21,14 @@ $content .= '
 $formElements = [];
 
 $n = [];
-$n['label'] = '<label for="rex-lightgallery-config-url">' . $this->i18n('config_url') . '</label>';
-$n['field'] = '<input class="form-control" type="text" id="rex-lightgallery-config-url" name="config[url]" value="' . $this->getConfig('url') . '"/>';
+$n['label'] = '<label for="rex-photoswipe-config-url">' . $this->i18n('config_url') . '</label>';
+$n['field'] = '<input class="form-control" type="text" id="rex-photoswipe-config-url" name="config[url]" value="' . $this->getConfig('url') . '"/>';
 $formElements[] = $n;
 
 $n = [];
-$n['label'] = '<label for="rex-lightgallery-config-ids">' . $this->i18n('config_ids') . '</label>';
+$n['label'] = '<label for="rex-photoswipe-config-ids">' . $this->i18n('config_ids') . '</label>';
 $select = new rex_select();
-$select->setId('rex-lightgallery-config-ids');
+$select->setId('rex-photoswipe-config-ids');
 $select->setMultiple();
 $select->setAttribute('class', 'form-control');
 $select->setName('config[ids][]');

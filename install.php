@@ -29,18 +29,18 @@ if ($somethingIsWrong) {
 //
 
 
-// SQL :: rex_media_manager_type => lightgallery_0450
+// SQL :: rex_media_manager_type => photoswipe_0450
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','lightgallery_0450');
-$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 450px)');
+$mediamanager_typ->setValue('name','photoswipe_0450');
+$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der photoswipe. (resize_width: 450px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "lightgallery_0450" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "photoswipe_0450" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "lightgallery_0450" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "photoswipe_0450" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
@@ -61,18 +61,18 @@ try {
 }
 
 
-// SQL :: rex_media_manager_type => lightgallery_0650
+// SQL :: rex_media_manager_type => photoswipe_0650
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','lightgallery_0650');
-$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 650px)');
+$mediamanager_typ->setValue('name','photoswipe_0650');
+$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der photoswipe. (resize_width: 650px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "lightgallery_0650" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "photoswipe_0650" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "lightgallery_0650" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "photoswipe_0650" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
@@ -93,18 +93,18 @@ try {
 }
 
 
-// SQL :: rex_media_manager_type => lightgallery_0900
+// SQL :: rex_media_manager_type => photoswipe_0900
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','lightgallery_0900');
-$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 900px)');
+$mediamanager_typ->setValue('name','photoswipe_0900');
+$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der photoswipe. (resize_width: 900px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "lightgallery_0900" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "photoswipe_0900" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "lightgallery_0900" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "photoswipe_0900" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
@@ -125,18 +125,18 @@ try {
 }
 
 
-// SQL :: rex_media_manager_type => lightgallery_1100
+// SQL :: rex_media_manager_type => photoswipe_1100
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','lightgallery_1100');
-$mediamanager_typ->setValue('description','Zur Darstellung der großen Bilder in der lightgallery. (resize_width: 1100px)');
+$mediamanager_typ->setValue('name','photoswipe_1100');
+$mediamanager_typ->setValue('description','Zur Darstellung der großen Bilder in der photoswipe. (resize_width: 1100px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "lightgallery_1100" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "photoswipe_1100" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "lightgallery_1100" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "photoswipe_1100" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();

@@ -15,8 +15,8 @@ $this->setProperty('author', 'Friends Of REDAXO');
 
 // Addonrechte (permissions) registieren
 if (rex::isBackend() && is_object(rex::getUser())) {
-    rex_perm::register('lightgallery[]');
-    rex_perm::register('lightgallery[config]');
+    rex_perm::register('photoswipe[]');
+    rex_perm::register('photoswipe[config]');
 }
 
 // Assets werden bei der Installation des Addons in den assets-Ordner kopiert und stehen damit
