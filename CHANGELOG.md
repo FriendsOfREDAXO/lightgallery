@@ -1,4 +1,4 @@
-**31.03.2017 Version 0.4.3**
+**02.04.2017 Version 0.4.3**
 
 - Zusätzliche Metafelder aus der Installationsroutine entfernt
 
