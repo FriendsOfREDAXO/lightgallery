@@ -1,3 +1,7 @@
+**31.03.2017 Version 0.4.3**
+
+- Zusätzliche Metafelder aus der Installationsroutine entfernt
+
 **31.03.2017 Version 0.4.2**
 
 - inkl. Metafeldern Prioritäten für die Installation zugewiesen

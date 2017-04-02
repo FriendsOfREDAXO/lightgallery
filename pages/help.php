@@ -5,7 +5,7 @@ $content .= '
 <p>
     Bei der Installation wurden mehrere Effekte beim Media Manager AddOn hinzugefügt:
 <ul>
-    <li><strong>Galerie:</strong> photoswipe_0450, photoswipe_0650, photoswipe_0900, photoswipe_1100</li>
+    <li><strong>Galerie:</strong> lightgallery_0450, lightgallery_0650, lightgallery_0900, lightgallery_1100</li>
     <li><strong>Scrolling:</strong> parallax</li>
 </ul>
     Sollten diese fehlen, bitte ein reinstall durchführen!
@@ -60,8 +60,8 @@ if (rex::getUser()->isAdmin()) {
             #$module->setDebug();
             $module->setTable(rex::getTablePrefix().'module');
 
-            $module->setValue('input', rex_file::get(rex_path::addon('photoswipe','pages/help_modul_install_input.inc')));
-            $module->setValue('output', rex_file::get(rex_path::addon('photoswipe','pages/help_modul_install_output.inc')));
+            $module->setValue('input', rex_file::get(rex_path::addon('lightgallery','pages/help_modul_install_input.inc')));
+            $module->setValue('output', rex_file::get(rex_path::addon('lightgallery','pages/help_modul_install_output.inc')));
 
             if ( $module_id == rex_request('module_id','integer',-1) ) {
 
@@ -91,19 +91,19 @@ if (rex::getUser()->isAdmin()) {
     $content .= '<p>'.$this->i18n('modul_install_description').'</p>';
 
     if ($module_id > 0) {
-        $content .= '<p><a class="btn btn-primary" href="index.php?page=photoswipe/help&amp;install_module=1&amp;module_id=' . $module_id . '" class="rex-button">' . $this->i18n('modul_update', htmlspecialchars($module_name)) . '</a></p>';
+        $content .= '<p><a class="btn btn-primary" href="index.php?page=lightgallery/help&amp;install_module=1&amp;module_id=' . $module_id . '" class="rex-button">' . $this->i18n('modul_update', htmlspecialchars($module_name)) . '</a></p>';
 
     }else {
-        $content .= '<p><a class="btn btn-primary" href="index.php?page=photoswipe/help&amp;install_module=1" class="rex-button">' . $this->i18n('modul_install', $module_name) . '</a></p>';
+        $content .= '<p><a class="btn btn-primary" href="index.php?page=lightgallery/help&amp;install_module=1" class="rex-button">' . $this->i18n('modul_install', $module_name) . '</a></p>';
 
     }
 
 
-    // SQL :: rex_template => TEMPLATE | photoswipe
+    // SQL :: rex_template => TEMPLATE | LIGHTGALLERY
     $template = rex_sql::factory();
     #$template->setDebug();
     $template->setTable(rex::getTablePrefix().'template');
-    $template->setQuery("SELECT * FROM rex_template WHERE content LIKE '%TEMPLATE | photoswipe%'");
+    $template->setQuery("SELECT * FROM rex_template WHERE content LIKE '%TEMPLATE | LIGHTGALLERY%'");
 
     $template_id = 0;
     $template_name = '';
@@ -119,7 +119,7 @@ if (rex::getUser()->isAdmin()) {
             #$template->setDebug();
             $template->setTable(rex::getTablePrefix().'template');
 
-            $template->setValue('content', rex_file::get(rex_path::addon('photoswipe','pages/help_template_install.inc')));
+            $template->setValue('content', rex_file::get(rex_path::addon('lightgallery','pages/help_template_install.inc')));
 
             if ( $template_id == rex_request('template_id','integer',-1) ) {
 
@@ -130,7 +130,7 @@ if (rex::getUser()->isAdmin()) {
 
             } else {
 
-                $template_name = 'tpl : addon photoswipe (js)';
+                $template_name = 'tpl : addon lightgallery (js)';
                 $template->setValue('name', $template_name);
                 $template->insert();
 
@@ -149,10 +149,10 @@ if (rex::getUser()->isAdmin()) {
     $content .= '<p>'.$this->i18n('template_install_description').'</p>';
 
     if ($template_id > 0) {
-        $content .= '<p><a class="btn btn-primary" href="index.php?page=photoswipe/help&amp;install_template=1&amp;template_id=' . $template_id . '" class="rex-button">' . $this->i18n('template_update', htmlspecialchars($template_name)) . '</a></p>';
+        $content .= '<p><a class="btn btn-primary" href="index.php?page=lightgallery/help&amp;install_template=1&amp;template_id=' . $template_id . '" class="rex-button">' . $this->i18n('template_update', htmlspecialchars($template_name)) . '</a></p>';
 
     }else {
-        $content .= '<p><a class="btn btn-primary" href="index.php?page=photoswipe/help&amp;install_template=1" class="rex-button">' . $this->i18n('template_install', $template_name) . '</a></p>';
+        $content .= '<p><a class="btn btn-primary" href="index.php?page=lightgallery/help&amp;install_template=1" class="rex-button">' . $this->i18n('template_install', $template_name) . '</a></p>';
 
     }
 
@@ -187,7 +187,7 @@ if (rex::getUser()->isAdmin()) {
 
     $content .= '<p>'.$this->i18n('metainfo_install_description').'</p>';
 
-    $content .= '<p><a class="btn btn-primary" href="index.php?page=photoswipe/help&amp;install_metainfo=1" class="rex-button">' . $this->i18n('metainfo_install', 'Metainfos Re-/Installieren') . '</a></p>';
+    $content .= '<p><a class="btn btn-primary" href="index.php?page=lightgallery/help&amp;install_metainfo=1" class="rex-button">' . $this->i18n('metainfo_install', 'Metainfos Re-/Installieren') . '</a></p>';
 
 }
 
@@ -204,7 +204,7 @@ $content_collapse1 = '
 <p>Folgendes im Template einfügen:</p>
 ';
 
-$content_collapse1 .= rex_string::highlight(rex_file::get(rex_path::addon('photoswipe','pages/help_template.inc')));
+$content_collapse1 .= rex_string::highlight(rex_file::get(rex_path::addon('lightgallery','pages/help_template.inc')));
 
 $content_collapse1 .= '
 <p>Bei der Installation wurden Effekte beim Media Manager AddOn hinzugefügt. Sollte dieser fehlen, bitte ein reinstall durchführen</p>
@@ -227,7 +227,7 @@ $content_collapse2 .= '
 <p>Diese Ausgabe dient als Beispiel für ein Modul:</p>
 
 ';
-$content_collapse2 .= rex_string::highlight(rex_file::get(rex_path::addon('photoswipe','pages/help_modul.inc')));
+$content_collapse2 .= rex_string::highlight(rex_file::get(rex_path::addon('lightgallery','pages/help_modul.inc')));
 
 $fragment = new rex_fragment();
 $fragment->setVar('collapse', true, false);

@@ -1,6 +1,6 @@
 <?php
 
-$file = rex_file::get(rex_path::addon('photoswipe','license.md'));
+$file = rex_file::get(rex_path::addon('lightgallery','license.md'));
 $Parsedown = new Parsedown();
 $content =  $Parsedown->text($file);
 

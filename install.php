@@ -29,18 +29,18 @@ if ($somethingIsWrong) {
 //
 
 
-// SQL :: rex_media_manager_type => photoswipe_0450
+// SQL :: rex_media_manager_type => lightgallery_0450
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','photoswipe_0450');
-$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der photoswipe. (resize_width: 450px)');
+$mediamanager_typ->setValue('name','lightgallery_0450');
+$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 450px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "photoswipe_0450" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "lightgallery_0450" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "photoswipe_0450" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "lightgallery_0450" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
@@ -61,18 +61,18 @@ try {
 }
 
 
-// SQL :: rex_media_manager_type => photoswipe_0650
+// SQL :: rex_media_manager_type => lightgallery_0650
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','photoswipe_0650');
-$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der photoswipe. (resize_width: 650px)');
+$mediamanager_typ->setValue('name','lightgallery_0650');
+$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 650px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "photoswipe_0650" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "lightgallery_0650" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "photoswipe_0650" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "lightgallery_0650" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
@@ -93,18 +93,18 @@ try {
 }
 
 
-// SQL :: rex_media_manager_type => photoswipe_0900
+// SQL :: rex_media_manager_type => lightgallery_0900
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','photoswipe_0900');
-$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der photoswipe. (resize_width: 900px)');
+$mediamanager_typ->setValue('name','lightgallery_0900');
+$mediamanager_typ->setValue('description','Zur Darstellung der Thumbs in der lightgallery. (resize_width: 900px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "photoswipe_0900" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "lightgallery_0900" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "photoswipe_0900" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "lightgallery_0900" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
@@ -125,18 +125,18 @@ try {
 }
 
 
-// SQL :: rex_media_manager_type => photoswipe_1100
+// SQL :: rex_media_manager_type => lightgallery_1100
 $mediamanager_typ = rex_sql::factory();
 #$mediamanager_typ->setDebug();
 $mediamanager_typ->setTable('rex_media_manager_type');
-$mediamanager_typ->setValue('name','photoswipe_1100');
-$mediamanager_typ->setValue('description','Zur Darstellung der großen Bilder in der photoswipe. (resize_width: 1100px)');
+$mediamanager_typ->setValue('name','lightgallery_1100');
+$mediamanager_typ->setValue('description','Zur Darstellung der großen Bilder in der lightgallery. (resize_width: 1100px)');
 
 try {
     $mediamanager_typ->insert();
-    echo rex_view::success('Der Media Manager "photoswipe_1100" Typ wurde angelegt. ');
+    echo rex_view::success('Der Media Manager "lightgallery_1100" Typ wurde angelegt. ');
 } catch (rex_sql_exception $e) {
-    echo rex_view::warning('Der Media Manager "photoswipe_1100" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
+    echo rex_view::warning('Der Media Manager "lightgallery_1100" Typ wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
 
 $mediamanager_typ_id = (int) $mediamanager_typ->getLastId();
@@ -187,27 +187,3 @@ try {
 } catch (rex_sql_exception $e) {
     echo rex_view::warning('Der Media Manager Effekt wurde nicht angelegt.<br/>Wahrscheinlich existiert er schon.');
 }
-
-
-// rex_metainfo_add_field() :: rex_metainfo_field => Diverse Metafelder
-// Metainformationen - ARTIKEL
-rex_metainfo_add_field('Individueller Title-Tag', 'art_title', '1','','1','','','','');
-rex_metainfo_add_field('Header', 'art_header_legend', '6','','12','','','','');
-rex_metainfo_add_field('Header Foto (statisch)', 'art_header_image', '6','','6','','preview=1','','');
-rex_metainfo_add_field('Header Abdunkelung', 'art_header_darken', '6','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','');
-rex_metainfo_add_field('Header Galerie (dynamisch als Slider)', 'art_header_gallery', '6','','7','','category=3 preview=1','','');
-
-// Metainformationen - KATEGORIEN
-rex_metainfo_add_field('Teaser', 'cat_teaser_legend', '6','','12','','','','');
-rex_metainfo_add_field('Teaser Bild', 'cat_teaser_image', '6','','6','','preview=1','','');
-rex_metainfo_add_field('Teaser Text', 'cat_teaser_description', '6','','2','','','','');
-
-// Metainformationen - MEDIEN
-rex_metainfo_add_field('Abdunkelung', 'med_gallery_darken', '6','','3','',':35% (default)|0:0%|0.1:10%|0.2:20%|0.3:30%|0.4:40%|0.5:50%|0.6:60%|0.7:70%|0.8:80%|0.9:90%','','|2|');
-rex_metainfo_add_field('Galerie', 'med_gallery_legend', '6','','12','','','','|2|');
-rex_metainfo_add_field('Galerie Titel', 'med_gallery_title', '6','','1','','','','|2|');
-rex_metainfo_add_field('Galerie Text', 'med_gallery_text', '6','','2','','','','|2|');
-rex_metainfo_add_field('Galerie Link (mit http://)', 'med_gallery_link', '6','','1','','','','|2|');
-rex_metainfo_add_field('Galerie Linktext', 'med_gallery_link_text', '6','','1','','','','|2|');
-
-echo rex_view::success('Metafelder wurde installiert/aktualisiert');
