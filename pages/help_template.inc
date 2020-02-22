@@ -5,7 +5,7 @@
     REX_MINIFY[type=css set=resources_CSS]
 
     <!-- Variante 2: Einbindung per CSS -->
-    <link rel="stylesheet" href="<?php echo rex_url::base('assets/lightgallery/css/lightgallery.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo rex_url::base('assets/addons/lightgallery/css/lightgallery.min.css') ?>">
 
 </head>
 
@@ -17,12 +17,12 @@
     <!-- Variante 1 bzw. 2 gilt auch für die JS-Dateien -->
 
     <!-- jQuery // Nur notwendig wenn jQuery nicht anders eingebunden wird // -->
-    <script src="<?php echo rex_url::base('assets/lightgallery/plugins/jquery/jquery-3.1.1.min.js') ?>"></script>
+    <script src="<?php echo rex_url::base('assets/addons/lightgallery/plugins/jquery/jquery-3.1.1.min.js') ?>"></script>
 
     ...
 
     <!-- lightgallery/js-file -->
-    <script src="<?php echo rex_url::base('assets/lightgallery/js/lightgallery.min.js') ?>"></script>
+    <script src="<?php echo rex_url::base('assets/addons/lightgallery/js/lightgallery.min.js') ?>"></script>
 
     <!-- lightgallery/script -->
     // GALERIE - lightGallery
