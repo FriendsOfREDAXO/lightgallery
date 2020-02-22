@@ -1,7 +1,7 @@
 <!-- // --- TEMPLATE | LIGHTGALLERY-START -->
 
 <!-- lightgallery/js-file -->
-<script src="<?php echo rex_url::base('assets/lightgallery/js/lightgallery.min.js') ?>"></script>
+<script src="<?php echo rex_url::base('assets/addons/lightgallery/js/lightgallery.min.js') ?>"></script>
 
 <!-- lightgallery/script -->
 // GALERIE - lightGallery
