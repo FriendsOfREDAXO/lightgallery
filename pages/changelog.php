@@ -1,6 +1,6 @@
 <?php
 
-$file = rex_file::get(rex_path::addon('lightgallery','changelog.md'));
+$file = rex_file::get(rex_path::addon('lightgallery','CHANGELOG.md'));
 $Parsedown = new Parsedown();
 $content =  $Parsedown->text($file);
 

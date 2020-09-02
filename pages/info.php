@@ -1,6 +1,6 @@
 <?php
 
-$file = rex_file::get(rex_path::addon('lightgallery','readme.md'));
+$file = rex_file::get(rex_path::addon('lightgallery','README.md'));
 $Parsedown = new Parsedown();
 $content =  $Parsedown->text($file);
 

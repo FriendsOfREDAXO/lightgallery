@@ -1,6 +1,6 @@
 <?php
 
-$file = rex_file::get(rex_path::addon('lightgallery','license.md'));
+$file = rex_file::get(rex_path::addon('lightgallery','LICENSE.md'));
 $Parsedown = new Parsedown();
 $content =  $Parsedown->text($file);
 

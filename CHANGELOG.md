@@ -1,3 +1,8 @@
+**02.09.2020 Version 0.4.4**
+
+- Fehlerhafte Dateienamen (README.md, LICENSE.md, CHANGELOG.md) korrigiert.
+
+
 **02.04.2017 Version 0.4.3**
 
 - Zusätzliche Metafelder aus der Installationsroutine entfernt
